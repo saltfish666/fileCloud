@@ -1,0 +1,15 @@
+test.jsp
+files/
+
+.DS_Store
+.idea/
+
+WEB-INF/jsp2/
+
+WEB-INF/jsp/
+
+WEB-INF/lib/
+
+WEB-INF/tags/
+
+WEB-INF/classes/

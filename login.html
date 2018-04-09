@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>login</title>
+    <style>
+        form{
+            margin-top: 28%;
+        }
+        .radio label{
+            margin-left: 25%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <form action="/login" method="post">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="Password1">Password</label>
+            <input name="password" type="password" class="form-control" id="Password1" placeholder="Password">
+        </div>
+        <div class="form-group" id="conformPassword">
+            <label for="Password2">ConformPassword</label>
+            <input type="password" class="form-control" id="Password2" placeholder="ConformPassword">
+        </div>
+
+        <div class="radio">
+            <label>
+                <input type="radio" name="loginOrSignup" checked id="signUp"> 注册
+            </label>
+            <label>
+                <input type="radio" name="loginOrSignup" id="signIn"> 登录
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">确认</button>
+    </form>
+
+</div>
+<script>
+
+
+let signInRadio = document.getElementById("signIn");
+let signUpRadio = document.getElementById("signUp");
+let conformPassword = document.getElementById("conformPassword");
+
+signInRadio.addEventListener("click",function (e) {
+    //conformPassword.style.display = "none";  感觉体验不是很好
+    conformPassword.style.visibility = "hidden";
+});
+
+signUpRadio.addEventListener("click",function (e) {
+    conformPassword.style.visibility = "visible";
+})
+
+
+</script>
+</body>
+</html>
